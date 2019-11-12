@@ -1,0 +1,9 @@
+tasks:
+- command: node server.js
+- command: curl lama.sh | sh
+
+ports:
+- port: 8080
+  onOpen: open-browser
+- port: 8844
+  onOpen: ignore
