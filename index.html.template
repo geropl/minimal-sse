@@ -8,7 +8,7 @@
 <body>
 <div id="example"></div>
 <script>
-  var source = new EventSource('https://8844-f725fc17-08c6-4187-ad14-9156b900d314.ws-eu01.gitpod.io:443/stream');
+  var source = new EventSource('${PORT_8844_URL}/stream');
   var div = document.getElementById('example');
   
   source.onopen = function (event) {

@@ -1,6 +1,9 @@
 tasks:
 - command: node server.js
-- command: curl lama.sh | sh
+- command: >
+    export PORT_8844_URL=$(gp url 8844);
+    envsubst < index.html.template > index.html;
+    curl lama.sh | sh
 
 ports:
 - port: 8080
